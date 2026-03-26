@@ -2,8 +2,9 @@ import { useState } from 'react'
 import { ConnectButton, useCurrentAccount } from '@mysten/dapp-kit'
 import MyKeys from './components/MyKeys'
 import IssueKey from './components/IssueKey'
+import AIAssistant from './components/AIAssistant'
 import './App.css'
-type Tab = 'keys' | 'issue'
+type Tab = 'keys' | 'issue' | 'assistant'
 export default function App() {
   const account = useCurrentAccount()
   const [tab, setTab] = useState<Tab>('keys')
@@ -46,13 +47,13 @@ export default function App() {
         <div className="dashboard">
           <div className="dashboard-inner">
             <nav className="tabs">
-              {(['keys', 'issue'] as Tab[]).map(t => (
+              {(['keys', 'issue', 'assistant'] as Tab[]).map(t => (
                 <button key={t} className={tab === t ? 'active' : ''} onClick={() => setTab(t)}>
-                  {t === 'keys' && '🔑 My Keys'}{t === 'issue' && '✨ Issue Key'}
+                  {t === 'keys' && '🔑 My Keys'}{t === 'issue' && '✨ Issue Key'}{t === 'assistant' && '🤖 AI Assistant'}
                 </button>
               ))}
             </nav>
-            <main>{tab === 'keys' && <MyKeys />}{tab === 'issue' && <IssueKey onSuccess={() => setTab('keys')} />}</main>
+            <main>{tab === 'keys' && <MyKeys />}{tab === 'issue' && <IssueKey onSuccess={() => setTab('keys')} />}{tab === 'assistant' && <AIAssistant />}</main>
           </div>
         </div>
       )}

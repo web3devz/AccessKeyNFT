@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--accent:#10b981;--accent-dim:#059669;--bg:#030f09;--surface:#071a10;--surface2:#0d2418;--border:#1a3d28;--text:#d0f0e0;--muted:#5a8a70;--success:#4ade80;--error:#f87171}
-body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;font-size:17px}
+:root{--accent:#ff8a3d;--accent-dim:#ff6a00;--bg:#0b1220;--surface:#121a2b;--surface2:#1a2438;--border:#2a3852;--text:#ecf2ff;--muted:#9eb0cb;--success:#34d399;--error:#f87171}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;font-size:17px}
 a{color:var(--accent);text-decoration:none}
